@@ -1,0 +1,9 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  .hoverAnimation {
+    @apply hover:bg-gradient-to-b from-gray-300 via-gray-600 to-black;
+  }
+}
