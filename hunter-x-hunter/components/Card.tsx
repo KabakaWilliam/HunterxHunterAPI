@@ -1,3 +1,5 @@
+import CardSubheader from "./CardSubheader";
+
 interface cardItems {
   name: string;
   image: string;
@@ -6,7 +8,7 @@ interface cardItems {
 
 const Card = ({ name, image, subHeader }: cardItems) => {
   return (
-    <div className="flex w-[500px] h-[500px] border border-gray-300  rounded-[20px] hoverAnimation relative ">
+    <div className="  flex w-[300px] h-[300px] md:w-[500px] md:h-[500px] border border-gray-300  rounded-[20px] hoverAnimation relative cursor-pointer ">
       <img
         src={image}
         alt="Gon Freecs"
@@ -17,7 +19,8 @@ const Card = ({ name, image, subHeader }: cardItems) => {
       />
       <section className="absolute top-[70%] w-full h-[30%] p-5 flex items-center justify-start flex-col">
         <span className="text-[40px] text-white w-full  ">{name}</span>
-        <span className="text-[20px] text-white font-light">{subHeader}</span>
+        {/* <span className="text-[20px] text-white font-light">{subHeader}</span> */}
+        <CardSubheader subHeader={subHeader} />
       </section>
     </div>
   );
